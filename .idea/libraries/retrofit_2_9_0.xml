@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="retrofit-2.9.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/retrofit-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/guava-19.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/gson-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/grpc-context-1.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jsr305-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/opencensus-contrib-http-util-0.12.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/converter-gson-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/opencensus-api-0.12.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/error_prone_annotations-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/google-http-client-1.40.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
