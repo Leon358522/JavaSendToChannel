@@ -10,6 +10,7 @@ import java.util.Map;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Hello world!
@@ -19,14 +20,21 @@ public final class App extends Libary{
     }
     private String channel = "";
     public Map<String, String> content = new HashMap<>();
-    int[] SI = {22,15,17,25};
+    String[] SI = {"22","15","17","25"};
     /**
      * Says hello to the world.
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
         App a = new App();
-        a.channel = "443110011607187488";
+        try {
+            a.channel = args[0];
+            a.SI = args[1].split(",");
+        } catch (Exception IndexOutOfBoundsException) {
+            a.channel = "443110011607187488";
+            a.SI = new String[]{"22", "25"};
+        }
+
         try {
             BufferedReader reader = new BufferedReader(new FileReader("libary.json"));
             Gson gs = new Gson();
@@ -36,22 +44,17 @@ public final class App extends Libary{
             DiscordChannelUrl url = new DiscordChannelUrl(urlS);
             HttpRequestFactory r = new NetHttpTransport().createRequestFactory();
             HttpContent c ;
-            for (int i: a.SI) {
-                String send = "{\"content\": " + "\"" + l.getCommand()[0] + l.getAllMySongs().get(String.valueOf(i)) + "\"}";
-                System.out.println(a.content.get("content"));
+            for (String i: a.SI) {
+                String send = "{\"content\": " + "\"" + l.getCommand()[0] + l.getAllMySongs().get(i) + "\"}";
                 HttpRequest request = r.buildRequest("POST",url , c = ByteArrayContent.fromString("application/json", send));
                 request.getHeaders().setAuthorization(l.getAuthorization());
                 HttpResponse response = request.execute();
+                TimeUnit.SECONDS.sleep(1);
             }
 
-        } catch (IOException e) {
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
-        try {
-            a.channel = args[0];
-        } catch (Exception IndexOutOfBoundsException) {
-        }
-
 
     }
 }
