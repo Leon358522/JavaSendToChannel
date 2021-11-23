@@ -10,7 +10,7 @@ public class Test {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("libary.json"));
             Gson gs = new Gson();
-            Libary l = gs.fromJson(reader, Libary.class);
+            Library l = gs.fromJson(reader, Library.class);
             System.out.println(l.getCommand()[0]);
         } catch (Exception FileNotFoundException){
 
