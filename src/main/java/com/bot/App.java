@@ -11,14 +11,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Hello world!
- */
 public final class App{
 
     private String channel = "";
     public Map<String, String> content = new HashMap<>();
-    String[] addS = {"Trouble's coming royal blood", "Monsoon 2020 Tokio Hotel", "Ottomatic oliver", "With or without you U2", "waiting Amber mark ", "Wandering star empire of the sun", "Can't hold me down GRiZ Tash neal", "It's my life No Doubt", "Our Demons The Glitch Mob", "FTW Lets Be Friends", "Memories (feat. Kid Cudi) David Guetta", "Halfway to nowhere Chelou", "Afraid The Neighbourhood"};
+    String[] addS = {"Lost without you Freya Ridings","Trouble's coming royal blood", "Monsoon 2020 Tokio Hotel", "Ottomatic oliver", "With or without you U2", "waiting Amber mark ", "Wandering star empire of the sun", "Can't hold me down GRiZ Tash neal", "It's my life No Doubt", "Our Demons The Glitch Mob", "FTW Lets Be Friends", "Memories (feat. Kid Cudi) David Guetta", "Halfway to nowhere Chelou", "Afraid The Neighbourhood"};
     String[] sI = {"22","15","17","25"};
     App() {}
 
